@@ -36,3 +36,18 @@ hamburger.addEventListener('click', function () {
     this.classList.toggle('is-active');
     nav_mobile.classList.toggle('is-active');
 });
+
+//Disable copy and paste with allert dialog
+const copyOverplay = document.querySelector('.copy-overplay');
+const protectAlert = document.querySelector('.protect-alert');
+const confirmAlert = document.querySelector('.confirmAlert');
+
+window.addEventListener('copy', (e)=>{
+    e.preventDefault();
+    copyOverplay.style.display = "block";
+    protectAlert.style.display = "block";
+});
+confirmAlert.addEventListener('click', ()=>{
+    copyOverplay.style.display = "none";
+    protectAlert.style.display = "none";
+});

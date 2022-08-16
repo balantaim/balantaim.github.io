@@ -30,6 +30,8 @@
     margin: 0;
 }
 body{
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--background);
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
@@ -39,6 +41,73 @@ body{
     transition-timing-function: ease-in;
     transition-property: var(--background), var(--foreground);
 }
+p{
+    /* user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; */
+}
+/* Start of custom-btn */
+.custom-btn{
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #182848;
+    padding: 2em 4em;
+    font-family: "Paytone One", sans-serif;
+}
+.btn{
+    text-decoration: none;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    background: linear-gradient(-45deg, #ff00c1, #00fff9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.custom-btn::after, .custom-btn::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      var(--rotate),
+      #ff00c1 0%,
+      #9600ff 25%,
+      #4900ff 50%,
+      #00b8ff 80%,
+      #00fff9 100%
+    );
+    width: 105%;
+    height: 110%;
+    left: -2.5%;
+    top: -5%;
+    z-index: -1;
+    border-radius: 10px;
+    transition: --rotate 9999s linear;
+}
+.custom-btn:hover::after, .custom-btn:hover::before{
+    --rotate: 3600deg;
+    transition: --rotate 20s linear;
+}
+.custom-btn:hover::before{
+    animation: fade 1.2s;
+}
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 130deg;
+    inherits: false;
+}
+@keyframes fade {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+      filter: blur(10px);
+    }
+}
+/* End of color custom-btn */
 h1{
     font-size: 38px;
     color: var(--txt-color);
@@ -138,8 +207,7 @@ nav{
 /* .svg-icon{
     width: 24px;
     height: 24px;
-    display: inline;
-    position: relative;
+    display: inline-block;
 } */
 
 nav-mobile{
@@ -172,7 +240,59 @@ img{
     text-align:center;
     display: inline-block;
     padding: 8px;
-    max-width: 320px;
+    min-width: 280px;
+    max-width: 380px;
+}
+
+.copy-overplay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.750);
+    display: none;
+    z-index: 1000;
+}
+.protect-alert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--secondary);
+    width: calc(100% /2);
+    height: calc(100% /2);
+    border-radius: 54px;
+    border: 6px solid var(--alert);
+    margin: auto;
+    display: none;
+    z-index: 2000;
+}
+.protect-alert span{
+    color: var(--txt-color);
+    font-size: 32px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+}
+.confirmAlert{
+    height: 80px;
+    width: 80%;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+    border-radius: 16px;
+    border: 0;
+    background-color: var(--alert);
+    color: white;
+    transition: 0.4s ease-in;
+}
+.confirmAlert:hover{
+    opacity: 0.7;
 }
 
 @media (min-width: 768px){
