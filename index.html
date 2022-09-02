@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="container">
             <h1>Rainbow Infinium</h1>
             <div class="menu">
-                <a href="#" class="is-active">Home</a>
+                <div><a href="/" class="is-active">Home</a></div>
+                <div><a href="#">About</a></div>
+                <div><a href="#">Privacy</a></div>
+
+                <!-- <a href="/" class="is-active">Home</a>
                 <a href="#">About</a>
-                <a href="#">Privacy</a>
+                <a href="#">Privacy</a> -->
 
                 <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="dark mode toggle">
                     <!-- <svg class="svg-icon" viewBox="0 0 20 20">
@@ -31,39 +36,66 @@
 
         </div>
     </nav>
+    <!-- Navigation mobile -->
     <nav-mobile class="nav-mobile">
         <a href="#" class="is-active">Home</a>
         <a href="#">About</a>
         <a href="#">Privacy</a>
+        <button id="dark-mode-toggle2" class="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50"><path fill="var(--primary)" d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z"/></svg>
+        </button>
     </nav-mobile>
+    <!-- Navigation End -->
     <div class="space"></div>
-    <h2>Hello</h2>
-    <div>
-        <!-- Copy protection -->
-        <div class="copy-overplay"></div>
-        <div class="protect-alert">
-            <span>Copy is forbidden!</span>
-            <button class="confirmAlert">OK</button>
-        </div>
-        <!-- End copy protection -->
+    <h2>Rainbow Infinium</h2>
 
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
+    <!-- Disable copy content -->
+    <div class="copy-overplay"></div>
+    <div class="protect-alert">
+        <span>Copy is forbidden!</span>
+        <button class="confirmAlert">OK</button>
+    </div>
+    <div class="img">
     
-        <p id="no-paste">Boza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a f
-            oza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a f
-            oza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a f
-        </p>
+        <div class="column">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        </div>
+        <div class="column">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        </div>
+        <div class="column">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        </div>
+        <div class="column">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+            <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        </div>
 
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
-        <img src="./images/road.jpg" alt="road" oncontextmenu="return false" class="custom_img">
     </div>
 
+    <p id="no-paste">Boza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a foza sdsdasfsdgrs afda fad afas daf a</p>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <!-- Start -->
+
+
+    <!-- end -->
+  
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © 2022 Rainbow Infinium. All rights reserved. Designed by&nbsp;</p>
+            <a href="#">Martin Atanasov</a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

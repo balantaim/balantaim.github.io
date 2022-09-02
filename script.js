@@ -1,6 +1,7 @@
 //Toggle Day/Night mode
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const darkModeToggle2 = document.querySelector("#dark-mode-toggle2");
 
 const enableDarkMode = () => {
     //1. add the class darkMode to the body
@@ -29,6 +30,14 @@ darkModeToggle.addEventListener("click", () =>{
     }
 });
 
+darkModeToggle2.addEventListener("click", () =>{
+    darkMode = localStorage.getItem("darkMode");
+    if(darkMode !== "enabled"){
+        enableDarkMode();
+    }else{
+        disableDarkMode();
+    }
+});
 //Hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const nav_mobile = document.querySelector('.nav-mobile');
@@ -52,33 +61,5 @@ confirmAlert.addEventListener('click', ()=>{
     protectAlert.style.display = "none";
 });
 
-//Disable print screen
-// document.addEventListener("keyup", function (e) {
-//     var keyCode = e.keyCode ? e.keyCode : e.which;
-//             if (keyCode == 44) {
-//                 stopPrntScr();
-//             }
-//         });
-// function stopPrntScr() {
-
-//             var inpFld = document.createElement("input");
-//             inpFld.setAttribute("value", ".");
-//             inpFld.setAttribute("width", "0");
-//             inpFld.style.height = "0px";
-//             inpFld.style.width = "0px";
-//             inpFld.style.border = "0px";
-//             document.body.appendChild(inpFld);
-//             inpFld.select();
-//             document.execCommand("copy");
-//             inpFld.remove(inpFld);
-//         }
-//        function AccessClipboardData() {
-//             try {
-//                 window.clipboardData.setData('text', "Access   Restricted");
-//             } catch (err) {
-//             }
-//         }
-//         setInterval("AccessClipboardData()", 300);
-
-
+//Swide JS
 
