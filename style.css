@@ -30,6 +30,7 @@
     margin: 0;
 }
 body{
+    position: relative;
     width: 100%;
     min-height: 100vh;
     background-color: var(--background);
@@ -285,22 +286,15 @@ nav-mobile a, nav-mobile #dark-mode-toggle2{
 /* end gallery */
 
 footer{
+    position: absolute;
     font-size: 20px;
-    position: relative;
     bottom: 0;
-    left: 0;
-    right: 0;
     background: var(--accent);
     height: auto;
     width: 100%;
-    padding-top: 40px;
-    margin-top: 80px;
 }
 .footer-content{
-    position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
