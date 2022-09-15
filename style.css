@@ -306,7 +306,7 @@ footer{
 /* SweeperJS */
 .swiper {
 	width: 80%;
-    background-color: var(--accent);
+    /* background-color: var(--accent); */
 }
 .image__wrapper {
 	width: 100%;
@@ -324,25 +324,53 @@ footer{
 }
 .swiper-button-prev,
 .swiper-button-next{
-    color: red;
-    opacity: 0.8;
+    color: white;
+    opacity: 0.5;
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover{
     opacity: 1;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
     transform: scale(1.2);
 }
-/* .swiper-pagination-bullet-active {
-    background-color: black;
-} */
-@media print {
-    body {
-       visibility: hidden;
+.swiper-pagination-bullet-active {
+    background-color: var(--background);
+}
+
+/* Start progress bar */
+#progress-bar{
+    --progress: 0;
+    position: fixed;
+    bottom: 0;
+    height: 5px;
+    width: var(--progress);
+    background-image: linear-gradient(90deg, rgba(200,13,174,1) 0%, rgba(46,226,206,1) 47%, rgba(188,226,10,1) 100%);
+    z-index: 9;
+    color: blue;
+}
+/* End progress bar */
+
+/* Only for Firefox */
+@supports (-moz-appearance:none){
+    #progress-bar{
+        visibility: hidden;
     }
- }
+}
+@media print {
+    h2, p {
+        /* Disable text select */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        visibility: hidden !important;
+    }
+}
 @media (min-width: 768px){
+    #progress-bar{
+        visibility: visible;
+    }
     .hamburger, nav-mobile{
         display: none;
     }

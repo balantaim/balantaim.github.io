@@ -95,3 +95,13 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+//Progress bar function
+function updateProgressBar(){
+    const {scrollTop, scrollHeight} = document.documentElement;
+    const scrollPercent = (scrollTop / (scrollHeight - window.innerHeight)) * 100 + '%';
+    // Update the progress variable to that total hight
+    document.querySelector('#progress-bar').style.setProperty('--progress', scrollPercent);
+}
+// Add event listener to the scroll
+document.addEventListener('scroll', updateProgressBar);
+
