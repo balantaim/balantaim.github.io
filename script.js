@@ -61,40 +61,6 @@ confirmAlert.addEventListener('click', ()=>{
     protectAlert.style.display = "none";
 });
 
-//Swiper JS
-const swiper = new Swiper('.swiper', {
-	loop: true,
-    lazy: true,
-    speed: 1800,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'bullets',
-		clickable: true,
-	},
-	keyboard: true,
-	mousewheel: true,
-
-    effect: 'creative',
-	creativeEffect: {
-		prev: {
-			// will set `translateZ(-400px)` on previous slides
-			translate: [0, 0, -400],
-		},
-		next: {
-			// will set `translateX(100%)` on next slides
-			translate: ['100%', 0, 0],
-		},
-	},
-});
-
 //Progress bar function
 function updateProgressBar(){
     const {scrollTop, scrollHeight} = document.documentElement;
