@@ -71,3 +71,15 @@ function updateProgressBar(){
 // Add event listener to the scroll
 document.addEventListener('scroll', updateProgressBar);
 
+//Initiate Gallery with card
+//Open selected image
+document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+});
+//Close selected image
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+}
