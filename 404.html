@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page not found</title>
-    
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        image{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 50%;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);;
+        }
+    </style>
 </head>
 <body>
-    <h1>Page not found</h1>
-    <h1>Error 404</h1>
+    <div class="container">
+        <h1>Page not found</h1>
+        <h1>Error 404</h1>
+        <image src="images/404-error-glitch-2.gif"></image>
+    </div>
 </body>
 </html>
