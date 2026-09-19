@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: /404.html
+
+Allow: /
+Allow: /privacy/
+Allow: /projects/
+
+Crawl-delay: 20
+
+Sitemap: https://balantaim.github.io
