@@ -40,6 +40,12 @@ document.querySelectorAll('.image-container img').forEach(image =>{
     }
 });
 //Close selected image
-document.querySelector('.popup-image span').onclick = () =>{
-    document.querySelector('.popup-image').style.display = 'none';
+// document.querySelector('.popup-image span').onclick = () =>{
+//     document.querySelector('.popup-image').style.display = 'none';
+// }
+const closeImageButton = document.querySelector('.popup-image span');
+if (closeImageButton) {
+    closeImageButton.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+    };
 }
