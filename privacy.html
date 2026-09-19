@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Privacy Policy</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
+
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/page-transitions.css"> -->
+    <script defer src="./js/theme.js"></script>
+    <script defer src="./js/main-js.js"></script>
 </head>
+
 <body>
-	    <!-- Navigation -->
+
+    <!-- Navigation -->
     <nav>
         <div class="container">
             <p>Rainbow Infinium</p>
             <div class="menu">
-                <div><a href="https://balantaim.github.io">Home</a></div>
-                <div><a href="#">About</a></div>
-                <div><a href="https://balantaim.github.io/privacy" class="is-active">Privacy</a></div>
+                <div><a href="/">Home</a></div>
+                <div><a href="/projects">Projects</a></div>
+                <div><a href="/privacy" class="is-active">Privacy</a></div>
 
                 <!-- <a href="/" class="is-active">Home</a>
                 <a href="#">About</a>
@@ -24,10 +37,13 @@
                     <!-- <svg class="svg-icon" viewBox="0 0 20 20">
                         <path fill="var(--primary)" d="M5.163,5.768c0.167,0.167,0.438,0.167,0.605,0c0.167-0.167,0.167-0.438,0-0.604L3.953,3.349c-0.167-0.167-0.438-0.167-0.604,0c-0.167,0.167-0.167,0.437,0,0.604L5.163,5.768z M14.837,5.768l1.814-1.814c0.167-0.167,0.167-0.438,0-0.604c-0.168-0.167-0.438-0.167-0.605,0l-1.813,1.814c-0.167,0.167-0.167,0.437,0,0.604C14.399,5.935,14.67,5.935,14.837,5.768 M10,4.014c0.236,0,0.428-0.191,0.428-0.428V1.021c0-0.236-0.192-0.428-0.428-0.428S9.572,0.785,9.572,1.021v2.565C9.572,3.823,9.764,4.014,10,4.014 M18.979,10h-3.848c0-2.833-2.297-5.131-5.131-5.131c-2.833,0-5.131,2.297-5.131,5.131H1.021c-0.236,0-0.428,0.191-0.428,0.428s0.192,0.428,0.428,0.428h17.957c0.236,0,0.428-0.191,0.428-0.428S19.215,10,18.979,10 M5.725,10c0-2.361,1.914-4.275,4.275-4.275S14.276,7.639,14.276,10H5.725zM12.565,15.985H11.71v-2.138c0-0.235-0.191-0.427-0.428-0.427H8.717c-0.236,0-0.428,0.191-0.428,0.427v2.138H7.435c-0.235,0-0.427,0.191-0.427,0.428c0,0.118,0.047,0.226,0.125,0.304l2.565,2.564c0.077,0.078,0.185,0.125,0.302,0.125s0.225-0.047,0.302-0.125l2.565-2.564c0.078-0.078,0.126-0.186,0.126-0.304C12.993,16.177,12.802,15.985,12.565,15.985 M10,18.374l-1.533-1.533h0.25c0.236,0,0.428-0.191,0.428-0.428v-2.138h1.709v2.138c0,0.236,0.192,0.428,0.428,0.428h0.251L10,18.374z"></path>
                     </svg> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50"><path fill="var(--primary)" d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50">
+                        <path fill="var(--primary)"
+                            d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z" />
+                    </svg>
                 </button>
             </div>
- 
+
             <button class="hamburger">
                 <span></span>
                 <span></span>
@@ -38,14 +54,21 @@
     </nav>
     <!-- Navigation mobile -->
     <nav-mobile class="nav-mobile">
-        <a href="#" class="is-active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Privacy</a>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/privacy" class="is-active">Privacy</a>
         <button id="dark-mode-toggle2" class="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50"><path fill="var(--primary)" d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50">
+                <path fill="var(--primary)"
+                    d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z" />
+            </svg>
         </button>
     </nav-mobile>
     <!-- Navigation End -->
+
+    <!-- Progress bar -->
+    <div class="post-container" id="progress-bar"></div>
+
     <div class="space"></div>
 
     <!-- Disable copy content -->
@@ -54,134 +77,293 @@
         <span>Copy is forbidden!</span>
         <button class="confirmAlert">OK</button>
     </div>
-    <!-- Privacy Policy Content -->
-    <div class="container_text">
-        <h1>Privacy Policy</h1>
-        <p>
-            This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-        </p>
-        <h1>Interpretation and Definitions</h1>
-        <h2>Interpretation</h2>
-        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-        <h2>Definitions</h2>
-        <p>For the purposes of this Privacy Policy:</p>
-        <ul>
-            <li><p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p></li>
-            <li><p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p></li>
-            <li><p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Rainbow Infinium, Sofia.</p></li>
-            <li><p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p></li>
-            <li><p><strong>Country</strong> refers to: Bulgaria</p></li>
-            <li><p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p></li>
-            <li><p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p></li>
-            <li><p><strong>Service</strong> refers to the Website.</p></li>
-            <li><p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p></li>
-            <li><p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p></li>
-            <li><p><strong>Website</strong> refers to Rainbow Infinium, accessible from <a href="https://balantaim.github.io" rel="external nofollow noopener" target="_blank">https://balantaim.github.io</a></p></li>
-            <li><p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p></li>
-        </ul>
-        <h1>Collecting and Using Your Personal Data</h1>
-        <h2>Types of Data Collected</h2>
-        <h3>Personal Data</h3>
-        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-        <ul>
-            <li><p>Usage Data</p></li>
-        </ul>
-        <h3>Usage Data</h3>
-        <p>Usage Data is collected automatically when using the Service.</p>
-        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-        <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
-        <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
-        <h3>Tracking Technologies and Cookies</h3>
-        <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
-        <ul>
-            <li><p><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</p></li>
-            <li><p><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</p></li>
-        </ul>
-        <p>Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies on the Free Privacy Policy website article.</p>
-        <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
-        <ul>
-            <li><p><strong>Necessary / Essential Cookies</strong></p></li>
-            <p>Type: Session Cookies</p>
-            <p>Administered by: Us</p>
-            <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
-            <li><p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p></li>
-            <p>Type: Persistent Cookies</p>
-            <p>Administered by: Us</p>
-            <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
-            <li><p><strong>Functionality Cookies</strong></p></li>
-            <p>Type: Persistent Cookies</p>
-            <p>Administered by: Us</p>
-            <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
-        </ul>
-        <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
-        <h2>Use of Your Personal Data</h2>
-        <p>The Company may use Personal Data for the following purposes:</p>
-        <ul>
-            <li><p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p></li>
-            <li><p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p></li>
-            <li><p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p></li>
-            <li><p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p></li>
-            <li><p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p></li>
-            <li><p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p></li>
-            <li><p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p></li>
-            <li><p><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p></li>
-        </ul>
-        <p>We may share Your personal information in the following situations:</p>
-        <ul>
-            <li><p><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</p></li>
-            <li><p><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</p></li>
-            <li><p><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</p></li>
-            <li><p><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</p></li>
-            <li><p><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</p></li>
-            <li><p><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</p></li>
-        </ul>
-        <h2>Retention of Your Personal Data</h2>
-        <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
-        <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
-        <h2>Transfer of Your Personal Data</h2>
-        <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
-        <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
-        <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
-        <h2>Delete Your Personal Data</h2>
-        <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
-        <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
-        <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
-        <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
-        <h2>Disclosure of Your Personal Data</h2>
-        <h3>Business Transactions</h3>
-        <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-        <h3>Law enforcement</h3>
-        <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-        <h3>Other legal requirements</h3>
-        <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-        <ul>
-            <li><p>Comply with a legal obligation</p></li>
-            <li><p>Protect and defend the rights or property of the Company</p></li>
-            <li><p>Prevent or investigate possible wrongdoing in connection with the Service</p></li>
-            <li><p>Protect the personal safety of Users of the Service or the public</p></li>
-            <li><p>Protect against legal liability</p></li>
-        </ul>
-        <h2>Security of Your Personal Data</h2>
-        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-        <h1>Children's Privacy</h1>
-        <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-        <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
-        <h1>Links to Other Websites</h1>
-        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
-        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
-        <h1>Changes to this Privacy Policy</h1>
-        <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
-        <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
-        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-        <h1>Contact Us</h1>
-        <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-        <ul>
-            <li><p>By email: bartukos1@gmail.com</p></li>
-            <li><p>By visiting this page on our website: <a href="https://balantaim.github.io" rel="external nofollow noopener" target="_blank">https://balantaim.github.io</a></p></li>
-        </ul>
-    </div>
-    <!-- Privacy Policy Content end -->
-    <div class="space"></div>
+
+    <main>
+
+        <div class="container_text">
+            <h1>Privacy Policy</h1>
+        
+        
+            <p><strong>Last updated:</strong> September 18, 2026</p>
+        
+            <p>
+                This Privacy Policy explains how Rainbow Infinium ("we", "us", or "our") handles information
+                when you use our websites and mobile applications (collectively, the "Services").
+            </p>
+        
+            <p>
+                We respect your privacy and are committed to being transparent about how our Services handle
+                information. At this time, our mobile applications do not collect or transmit personal data
+                to us or to third-party services, unless a particular application clearly states otherwise.
+            </p>
+        
+            <h2>1. Data Controller</h2>
+        
+            <p>
+                The entity responsible for the Services and, where applicable, the processing of personal
+                data is:
+            </p>
+        
+            <ul>
+                <li><strong>Founder / Developer:</strong> Martin Atanasov</li>
+                <li><strong>Project / Community:</strong> Rainbow Infinium</li>
+                <li><strong>Country:</strong> Bulgaria</li>
+                <li><strong>Email:</strong> <a href="mailto:bartukos1@gmail.com">bartukos1&#64;gmail.com</a></li>
+            </ul>
+        
+            <p>
+                If a particular application is operated by a different legal entity or developer, the
+                applicable application store listing or the application itself may provide additional
+                information.
+            </p>
+        
+            <h2>2. Information We Collect</h2>
+        
+            <h3>Mobile Applications</h3>
+        
+            <p>
+                Our current mobile applications are designed to operate without collecting or transmitting
+                personal information to us.
+            </p>
+        
+            <p>
+                At the current time, we do not intentionally collect or transmit information such as:
+            </p>
+        
+            <ul>
+                <li>Your name or email address</li>
+                <li>User account information</li>
+                <li>Precise location information</li>
+                <li>Contacts</li>
+                <li>Photos or personal files</li>
+                <li>Microphone or camera recordings</li>
+                <li>Financial or payment information</li>
+                <li>Advertising identifiers</li>
+                <li>Analytics information</li>
+                <li>Crash or diagnostic reports</li>
+            </ul>
+        
+            <p>
+                This list describes our current practices and may change if a future version of an
+                application introduces features that require personal data.
+            </p>
+        
+            <h3>Website</h3>
+        
+            <p>
+                Our website is primarily used to provide information about our applications and to host
+                this Privacy Policy.
+            </p>
+        
+            <p>
+                We do not currently use cookies, advertising cookies, analytics cookies, or similar
+                tracking technologies on this website.
+            </p>
+        
+            <p>
+                If you contact us by email, we will receive the information that you choose to include in
+                your message, such as your email address and the contents of your message. We use this
+                information only for the purpose of responding to your request and communicating with you.
+            </p>
+        
+            <h2>3. Cookies and Tracking Technologies</h2>
+        
+            <p>
+                We currently do not use cookies on our website for analytics, advertising, profiling, or
+                tracking purposes.
+            </p>
+        
+            <p>
+                Our current mobile applications also do not use cookies or similar web tracking
+                technologies to track you.
+            </p>
+        
+            <p>
+                If this changes in the future, we will update this Privacy Policy and, where required,
+                provide appropriate information and choices before using such technologies.
+            </p>
+        
+            <h2>4. How We Use Information</h2>
+        
+            <p>
+                Because our current mobile applications do not collect or transmit personal data, we do not
+                currently process personal data for analytics, advertising, profiling, or user tracking
+                purposes.
+            </p>
+        
+            <p>
+                Information voluntarily provided when contacting us by email is used to:
+            </p>
+        
+            <ul>
+                <li>Respond to your questions or requests;</li>
+                <li>Provide technical support;</li>
+                <li>Investigate reports concerning our applications or Services; and</li>
+                <li>Communicate with you regarding your request.</li>
+            </ul>
+        
+            <h2>5. Third-Party Services</h2>
+        
+            <p>
+                Our current mobile applications do not intentionally send personal data to third-party
+                analytics, advertising, authentication, or database services.
+            </p>
+        
+            <p>
+                We may use third-party service providers in the future to provide specific functionality,
+                such as authentication, database hosting, crash reporting, analytics, or other technical
+                services.
+            </p>
+        
+            <p>
+                If we introduce a third-party service that collects or processes personal data, we will
+                update this Privacy Policy to describe the relevant data processing before or when the
+                applicable functionality is introduced, as required by applicable law.
+            </p>
+        
+            <h2>6. Future Accounts and Login</h2>
+        
+            <p>
+                Some of our applications may offer user accounts or login functionality in the future.
+            </p>
+        
+            <p>
+                If account functionality is introduced, we may need to process information such as an email
+                address, authentication information, or other information necessary to create and maintain
+                an account.
+            </p>
+        
+            <p>
+                Before introducing such functionality, we will update this Privacy Policy to explain what
+                information is collected, why it is collected, how it is used, where it is stored, and
+                which service providers may process it.
+            </p>
+        
+            <h2>7. Data Sharing</h2>
+        
+            <p>
+                We do not currently sell, rent, or otherwise share personal data collected through our
+                mobile applications with third parties because our current applications do not collect
+                personal data.
+            </p>
+        
+            <p>
+                We may disclose information where required to do so by applicable law, regulation, legal
+                process, or a valid request from a competent public authority.
+            </p>
+        
+            <h2>8. Data Retention</h2>
+        
+            <p>
+                Since our current mobile applications do not collect or transmit personal data, we do not
+                maintain a database of personal data collected through those applications.
+            </p>
+        
+            <p>
+                If you contact us by email, we may retain your correspondence for as long as reasonably
+                necessary to respond to your request, provide support, maintain appropriate records, or
+                comply with applicable legal obligations.
+            </p>
+        
+            <h2>9. Data Security</h2>
+        
+            <p>
+                We take reasonable measures to protect information that we process. However, no method of
+                electronic transmission or storage can be guaranteed to be completely secure.
+            </p>
+        
+            <p>
+                If we introduce functionality that involves the collection or storage of personal data,
+                appropriate security measures will be implemented based on the nature and risks of that
+                processing.
+            </p>
+        
+            <h2>10. Your Privacy Rights</h2>
+        
+            <p>
+                Depending on where you live and the laws applicable to you, you may have rights regarding
+                your personal data. These may include the right to request access to, correction of, or
+                deletion of your personal data, as well as other rights provided by applicable data
+                protection laws.
+            </p>
+        
+            <p>
+                If you have contacted us by email and want us to delete or correct information associated
+                with your correspondence, you can contact us using the email address below.
+            </p>
+        
+            <p>
+                Where applicable, you may also have the right to lodge a complaint with the data protection
+                authority responsible for your jurisdiction.
+            </p>
+        
+            <h2>11. Children's Privacy</h2>
+        
+            <p>
+                Our Services are not intentionally designed to collect personal information from children.
+                We do not knowingly collect personal data from children through our current mobile
+                applications.
+            </p>
+        
+            <p>
+                If you believe that a child has provided us with personal information, please contact us.
+                If we become aware that we have collected personal information from a child in circumstances
+                where collection is not permitted, we will take reasonable steps to delete it.
+            </p>
+        
+            <h2>12. Links to Other Websites</h2>
+        
+            <p>
+                Our website or applications may contain links to websites or services operated by third
+                parties.
+            </p>
+        
+            <p>
+                We are not responsible for the privacy practices, content, or security of third-party
+                websites or services. We encourage you to review the privacy policy of any third-party
+                service you visit.
+            </p>
+        
+            <h2>13. Changes to This Privacy Policy</h2>
+        
+            <p>
+                We may update this Privacy Policy from time to time to reflect changes to our Services,
+                technology, legal requirements, or data processing practices.
+            </p>
+        
+            <p>
+                When we make changes, we will update the "Last updated" date at the top of this Privacy
+                Policy. For significant changes, we may provide additional notice where appropriate.
+            </p>
+        
+            <p>
+                We encourage you to review this Privacy Policy periodically.
+            </p>
+        
+            <h2>14. Contact Us</h2>
+        
+            <p>
+                If you have questions about this Privacy Policy or our privacy practices, you can contact
+                us:
+            </p>
+        
+            <ul>
+                <li>
+                    <strong>Email: </strong><a href="mailto:bartukos1@gmail.com">bartukos1&#64;gmail.com</a>
+                </li>
+                <li>
+                    <strong>Website:</strong>
+                    <a href="https://balantaim.github.io" rel="external nofollow noopener"
+                        target="_blank">https://balantaim.github.io</a>
+                </li>
+            </ul>
+        
+        </div>
+
+        <!-- Privacy Policy Content end -->
+        <div class="space"></div>
+
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -189,9 +371,11 @@
             <p>Copyright &copy;
                 <script>
                     document.write(new Date().getFullYear());
-                </script>, Rainbow Infinium.</p>
+                </script>, Rainbow Infinium.
+            </p>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

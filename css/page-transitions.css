@@ -1,0 +1,38 @@
+@view-transition {
+    navigation: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    /* page-content is the name that we use in order to not animate the top bar*/
+    main {
+        view-transition-name: page-content;
+    }
+
+    ::view-transition-group(page-content) {
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(page-content) {
+        animation: slide-out .5s ease forwards;
+    }
+
+    ::view-transition-new(page-content) {
+        animation: slide-in .5s ease forwards;
+    }
+
+    @keyframes slide-out {
+        to {
+            opacity: 0;
+            transform: translateX(-80px)
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(80px)
+        }
+    }
+
+}

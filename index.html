@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
+
     <title>Rainbow Infinium</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./after.js"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/page-transitions.css"> -->
+    <script defer src="./js/theme.js"></script>
+    <script defer src="./js/after.js"></script>
+    <script defer src="./js/main-js.js"></script>
 </head>
+
 <body>
+
     <!-- Navigation -->
     <nav>
         <div class="container">
             <p>RI</p>
             <div class="menu">
-                <div><a href="https://balantaim.github.io" class="is-active">Home</a></div>
-                <div><a href="#">About</a></div>
-                <div><a href="https://balantaim.github.io/privacy">Privacy</a></div>
+                <div><a href="/" class="is-active">Home</a></div>
+                <div><a href="/projects">Projects</a></div>
+                <div><a href="/privacy">Privacy</a></div>
 
                 <!-- <a href="/" class="is-active">Home</a>
                 <a href="#">About</a>
@@ -25,10 +40,13 @@
                     <!-- <svg class="svg-icon" viewBox="0 0 20 20">
                         <path fill="var(--primary)" d="M5.163,5.768c0.167,0.167,0.438,0.167,0.605,0c0.167-0.167,0.167-0.438,0-0.604L3.953,3.349c-0.167-0.167-0.438-0.167-0.604,0c-0.167,0.167-0.167,0.437,0,0.604L5.163,5.768z M14.837,5.768l1.814-1.814c0.167-0.167,0.167-0.438,0-0.604c-0.168-0.167-0.438-0.167-0.605,0l-1.813,1.814c-0.167,0.167-0.167,0.437,0,0.604C14.399,5.935,14.67,5.935,14.837,5.768 M10,4.014c0.236,0,0.428-0.191,0.428-0.428V1.021c0-0.236-0.192-0.428-0.428-0.428S9.572,0.785,9.572,1.021v2.565C9.572,3.823,9.764,4.014,10,4.014 M18.979,10h-3.848c0-2.833-2.297-5.131-5.131-5.131c-2.833,0-5.131,2.297-5.131,5.131H1.021c-0.236,0-0.428,0.191-0.428,0.428s0.192,0.428,0.428,0.428h17.957c0.236,0,0.428-0.191,0.428-0.428S19.215,10,18.979,10 M5.725,10c0-2.361,1.914-4.275,4.275-4.275S14.276,7.639,14.276,10H5.725zM12.565,15.985H11.71v-2.138c0-0.235-0.191-0.427-0.428-0.427H8.717c-0.236,0-0.428,0.191-0.428,0.427v2.138H7.435c-0.235,0-0.427,0.191-0.427,0.428c0,0.118,0.047,0.226,0.125,0.304l2.565,2.564c0.077,0.078,0.185,0.125,0.302,0.125s0.225-0.047,0.302-0.125l2.565-2.564c0.078-0.078,0.126-0.186,0.126-0.304C12.993,16.177,12.802,15.985,12.565,15.985 M10,18.374l-1.533-1.533h0.25c0.236,0,0.428-0.191,0.428-0.428v-2.138h1.709v2.138c0,0.236,0.192,0.428,0.428,0.428h0.251L10,18.374z"></path>
                     </svg> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50"><path fill="var(--primary)" d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50">
+                        <path fill="var(--primary)"
+                            d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z" />
+                    </svg>
                 </button>
             </div>
- 
+
             <button class="hamburger">
                 <span></span>
                 <span></span>
@@ -39,16 +57,19 @@
     </nav>
     <!-- Navigation mobile -->
     <nav-mobile class="nav-mobile">
-        <a href="#" class="is-active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Privacy</a>
+        <a href="/" class="is-active">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/privacy">Privacy</a>
         <button id="dark-mode-toggle2" class="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50"><path fill="var(--primary)" d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" height="45" width="45" viewBox="0 0 50 50">
+                <path fill="var(--primary)"
+                    d="M24.05 46.55 17.3 40H8v-9.3L1.3 24 8 17.3V8h9.3l6.75-6.7L30.7 8H40v9.3l6.7 6.7-6.7 6.7V40h-9.3Zm0-9.55q5.4 0 9.175-3.8Q37 29.4 37 23.95q0-5.4-3.775-9.175Q29.45 11 24.05 11Zm0 5.35 5.4-5.35H37v-7.55L42.45 24 37 18.55V11h-7.55l-5.4-5.45-5.5 5.45H11v7.55L5.55 24 11 29.45V37h7.5ZM24 23.95Z" />
+            </svg>
         </button>
     </nav-mobile>
     <!-- Navigation End -->
-    <div class="space"></div>
-    <h1>Rainbow Infinium</h1>
+
+    <!-- Progress bar -->
     <div class="post-container" id="progress-bar"></div>
 
     <!-- Disable copy content -->
@@ -57,122 +78,187 @@
         <span>Copy is forbidden!</span>
         <button class="confirmAlert">OK</button>
     </div>
-    <!-- Content description -->
-    <section>
-        <div class="container_text">
-            <p>
-                Rainbow Infinium is a software company that specializes in developing Android applications. Our team of skilled developers, designers, and project managers work together to create top-quality mobile applications that meet the needs of our clients and end-users.
-            </p>
-            <p>
-                Our main responsibility is to provide high-quality Android application development services to our clients. We work closely with our clients to understand their business requirements and create custom solutions that meet their specific needs. We use the latest technologies and frameworks to build applications that are robust, scalable, and easy to maintain.
-            </p>
-            <p>
-                Our Android development services cover a wide range of applications including but not limited to, e-commerce, social media, educational, gaming, and healthcare applications. We have experience working with a variety of industries, including startups, small and medium-sized businesses, and large corporations.
-            </p>
-            <p>
-                At Rainbow Infinium, we believe in providing exceptional customer service and delivering projects on time and within budget. We take pride in our work and are dedicated to ensuring that our clients are satisfied with the end result. We also provide ongoing maintenance and support services to ensure that our applications continue to perform at the highest level.
-            </p>
-            <p>
-                Overall, Rainbow Infinium is a reliable and innovative software company that can provide you with exceptional Android application development services. Whether you need a custom application or want to improve an existing one, we have the expertise and experience to help you achieve your goals.
-            </p>
-        </div>
-    </section>
-    <!-- Founder -->
-    <section>
-        <h1>Founder</h1>
-        <div class="container_text">
-            <p>
-                Martin Atanasov is the founder of Rainbow Infinium, a leading software development company specializing in Android application development. With a Master's degree in Information Technology, Marian brings a wealth of knowledge and expertise to the table.
-            </p>
-            <p>
-                Marian's experience in software development has allowed him to build a strong foundation in several programming languages, including JavaScript, C++, Java, Kotlin, and SQL. He is a skilled software developer with a keen eye for detail, and he is passionate about creating high-quality mobile applications that meet the needs of his clients.
-            </p>
-            <p>
-                Throughout his career, Martin has worked with a variety of industries and businesses, from small startups to large corporations. He understands the importance of building strong relationships with his clients and believes that communication is key to delivering a successful project.
-            </p>
-            <p>
-                Marian is an innovative and forward-thinking individual who is always looking for new ways to improve his skills and keep up-to-date with the latest industry trends. He is committed to providing exceptional service and delivering projects on time and within budget.
-            </p>
-        </div>
-    </section>
-    <!-- App content -->
-    <section>
-        <div class="container_text">
-            <h1>Event Color Book</h1>
-            <p>"Event Color Book" is a powerful and versatile mobile application that serves as an event diary. This application is designed to help you easily manage and keep track of all your events and tasks. It provides a variety of features and functionalities that make it easy for you to organize your schedule and stay on top of your tasks.</p>
-            <p>One of the main functions of "Event Color Book" is the ability to create events with descriptions, priority levels, locations, avatars, and times. This makes it easy for you to organize your events and ensure that you don't forget anything important. You can also set alarms to remind you of upcoming events, so you never miss anything.</p>
-            <p>Another key feature of "Event Color Book" is the ability to customize the color themes. This means that you can choose a color that suits your personality and preferences. You can also create charts to visualize your schedule and see how much time you spend on different tasks.</p>
-            <p>The application also provides a variety of different charts and analytics to help you better understand your event patterns and behaviors. You can use this information to optimize your schedule and ensure that you are spending your time efficiently.</p>
-            <p>Overall, "Event Color Book" is a powerful and versatile event diary application that can help you stay organized and on top of your tasks. Its many features and functionalities make it easy to manage your schedule and ensure that you never miss anything important. With its customizable color themes and powerful analytics, it is the perfect tool for anyone who wants to take control of their schedule and maximize their productivity.</p>
-        </div>
-    </section>
 
-    <!-- gallery -->
-    <section>
-        <div class="card-container">
-            <div class="image-container">
-                <div class="image"><img src="./images/road.jpg" alt="road"></div>
-                <div class="image"><img src="./images/road2.jpg" alt="road"></div>  
-                <div class="image"><img src="./images/road.jpg" alt="road"></div>  
-                <div class="image"><img src="./images/road2.jpg" alt="road"></div>  
-                <div class="image"><img src="./images/road.jpg" alt="road"></div>  
-                <div class="image"><img src="./images/road2.jpg" alt="road"></div>  
+    <main>
+
+        <div class="space"></div>
+        <h1>Rainbow Infinium</h1>
+
+        <!-- Content description -->
+        <section>
+            <div class="container_text">
+                <p>
+                    Rainbow Infinium is a software company that specializes in developing Android applications. Our team
+                    of skilled developers, designers, and project managers work together to create top-quality mobile
+                    applications that meet the needs of our clients and end-users.
+                </p>
+                <p>
+                    Our main responsibility is to provide high-quality Android application development services to our
+                    clients. We work closely with our clients to understand their business requirements and create
+                    custom solutions that meet their specific needs. We use the latest technologies and frameworks to
+                    build applications that are robust, scalable, and easy to maintain.
+                </p>
+                <p>
+                    Our Android development services cover a wide range of applications including but not limited to,
+                    e-commerce, social media, educational, gaming, and healthcare applications. We have experience
+                    working with a variety of industries, including startups, small and medium-sized businesses, and
+                    large corporations.
+                </p>
+                <p>
+                    At Rainbow Infinium, we believe in providing exceptional customer service and delivering projects on
+                    time and within budget. We take pride in our work and are dedicated to ensuring that our clients are
+                    satisfied with the end result. We also provide ongoing maintenance and support services to ensure
+                    that our applications continue to perform at the highest level.
+                </p>
+                <p>
+                    Overall, Rainbow Infinium is a reliable and innovative software company that can provide you with
+                    exceptional Android application development services. Whether you need a custom application or want
+                    to improve an existing one, we have the expertise and experience to help you achieve your goals.
+                </p>
             </div>
-            <div class="popup-image">
-                <span>&times;</span>
-                <img src="./images/road.jpg" alt="">
-                <!-- <img src="./images/road.jpg" style="height: 350px; width: 450px;" alt=""> -->
+        </section>
+        <!-- Founder -->
+        <section>
+            <h1>Founder</h1>
+            <div class="container_text">
+                <p>
+                    Martin Atanasov is the founder of Rainbow Infinium, a leading software development company
+                    specializing in Android application development. With a Master's degree in Information Technology,
+                    Marian brings a wealth of knowledge and expertise to the table.
+                </p>
+                <p>
+                    Martin's experience in software development has allowed him to build a strong foundation in modern web and mobile technologies. He is a skilled software developer with a keen eye for detail, passionate about creating responsive, user-friendly, and high-quality digital experiences across web and mobile platforms. He focuses on building reliable, scalable applications that effectively meet the needs of his clients.
+                </p>
+                <p>
+                    Throughout his career, Martin has worked with a variety of industries and businesses, from small
+                    startups to large corporations. He understands the importance of building strong relationships with
+                    his clients and believes that communication is key to delivering a successful project.
+                </p>
+                <p>
+                    Marian is an innovative and forward-thinking individual who is always looking for new ways to
+                    improve his skills and keep up-to-date with the latest industry trends. He is committed to providing
+                    exceptional service and delivering projects on time and within budget.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <div class="space"></div>
-    <div class="space"></div>
-
-    <section>
-        <div class="img">
-            <div class="column hidden">
-                <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        </section>
+        <!-- App content -->
+        <section>
+            <div class="container_text">
+                <h1>Oasis - Color Events</h1>
+                <p>"Oasis - Color Events" is a powerful and versatile mobile application that serves as an event diary. This
+                    application is designed to help you easily manage and keep track of all your events and tasks. It
+                    provides a variety of features and functionalities that make it easy for you to organize your
+                    schedule and stay on top of your tasks.</p>
+                <p>One of the main functions of "Oasis - Color Events" is the ability to create events with descriptions,
+                    priority levels, locations, avatars, and times. This makes it easy for you to organize your events
+                    and ensure that you don't forget anything important. You can also set alarms to remind you of
+                    upcoming events, so you never miss anything.</p>
+                <p>Another key feature of "Oasis - Color Events" is the ability to customize the color themes. This means
+                    that you can choose a color that suits your personality and preferences. You can also create charts
+                    to visualize your schedule and see how much time you spend on different tasks.</p>
+                <p>The application also provides a variety of different charts and analytics to help you better
+                    understand your event patterns and behaviors. You can use this information to optimize your schedule
+                    and ensure that you are spending your time efficiently.</p>
+                <p>Overall, "Oasis - Color Events" is a powerful and versatile event diary application that can help you
+                    stay organized and on top of your tasks. Its many features and functionalities make it easy to
+                    manage your schedule and ensure that you never miss anything important. With its customizable color
+                    themes and powerful analytics, it is the perfect tool for anyone who wants to take control of their
+                    schedule and maximize their productivity.</p>
             </div>
+        </section>
 
-            <div class="column hidden">
-                <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        <!-- gallery -->
+        <section>
+            <div class="card-container">
+                <div class="image-container">
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="./images/road.jpg" alt="">
+                    <!-- <img src="./images/road.jpg" style="height: 350px; width: 450px;" alt=""> -->
+                </div>
             </div>
+        </section>
 
-            <div class="column hidden">
-                <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+        <div class="space"></div>
+        <div class="space"></div>
+
+        <section>
+            <div class="img">
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
             </div>
+        </section>
 
-            <div class="column hidden">
-                <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
-            </div>
-    
-        </div>
-    </section>
+        <div class="space"></div>
 
-    <div class="space"></div>
+        <section class="hidden">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur a tempore fugiat non? Eius
+                fugiat eum accusantium dolore unde, saepe necessitatibus recusandae quibusdam, laudantium ex deleniti!
+                Qui, totam repudiandae maxime, soluta est saepe fugiat consequuntur inventore ullam ea enim. Sapiente
+                doloremque tenetur eum aspernatur deleniti! Atque quam voluptas animi quisquam, voluptates dolorum
+                ullam, magni consequuntur vero nam dolore eaque quae maxime accusantium. Nisi vel sint veniam amet quos
+                natus, labore nobis magnam placeat optio, aperiam numquam architecto quis aliquam consectetur
+                praesentium exercitationem dolor assumenda doloribus. Necessitatibus et dolorem, magnam praesentium
+                consectetur tempore id laudantium atque quisquam non. Corrupti laboriosam delectus aperiam, illum rem
+                odit! Eos asperiores, amet odio tempore consequatur obcaecati inventore. Totam provident quaerat illum
+                harum sit quae necessitatibus consectetur nisi maxime ullam, iste saepe, molestiae, impedit voluptates
+                doloremque. Aperiam nihil amet porro tempora illum labore aliquid quia, in at, ipsam dolores sunt
+                provident nemo, obcaecati sint. Dolorem qui quidem sint eos, necessitatibus quaerat iste alias deleniti,
+                distinctio tempore blanditiis, dolor quam incidunt dolorum at cumque facilis veniam quo laborum
+                excepturi labore nam? Voluptate nisi quibusdam labore nobis nihil deserunt facilis quaerat officia fugit
+                accusamus quo consequatur totam beatae soluta dignissimos saepe minima aliquid pariatur, hic ut eveniet
+                dolorum esse non. Tempore ex voluptatibus reprehenderit sit aliquid sed molestiae quidem placeat labore
+                totam eos, vero et optio aut iste, a soluta vitae quas fugiat qui laudantium recusandae, dolores cumque.
+                Reiciendis nisi quas soluta consequatur! Nesciunt, consequatur quam! Asperiores ut, autem voluptatibus
+                et, fugit, quam iste aspernatur obcaecati facere expedita amet magnam sit doloremque corporis ducimus a
+                temporibus doloribus voluptate qui. Dolores architecto blanditiis rerum nihil repellat amet similique
+                sunt deserunt ratione culpa, reiciendis neque dolor laborum sit reprehenderit ea corporis vel molestias
+                incidunt odio iure facere doloremque? Qui facilis error repudiandae amet sapiente. Sapiente illo nihil
+                dignissimos veniam?</p>
+        </section>
 
-    <section class="hidden">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur a tempore fugiat non? Eius fugiat eum accusantium dolore unde, saepe necessitatibus recusandae quibusdam, laudantium ex deleniti! Qui, totam repudiandae maxime, soluta est saepe fugiat consequuntur inventore ullam ea enim. Sapiente doloremque tenetur eum aspernatur deleniti! Atque quam voluptas animi quisquam, voluptates dolorum ullam, magni consequuntur vero nam dolore eaque quae maxime accusantium. Nisi vel sint veniam amet quos natus, labore nobis magnam placeat optio, aperiam numquam architecto quis aliquam consectetur praesentium exercitationem dolor assumenda doloribus. Necessitatibus et dolorem, magnam praesentium consectetur tempore id laudantium atque quisquam non. Corrupti laboriosam delectus aperiam, illum rem odit! Eos asperiores, amet odio tempore consequatur obcaecati inventore. Totam provident quaerat illum harum sit quae necessitatibus consectetur nisi maxime ullam, iste saepe, molestiae, impedit voluptates doloremque. Aperiam nihil amet porro tempora illum labore aliquid quia, in at, ipsam dolores sunt provident nemo, obcaecati sint. Dolorem qui quidem sint eos, necessitatibus quaerat iste alias deleniti, distinctio tempore blanditiis, dolor quam incidunt dolorum at cumque facilis veniam quo laborum excepturi labore nam? Voluptate nisi quibusdam labore nobis nihil deserunt facilis quaerat officia fugit accusamus quo consequatur totam beatae soluta dignissimos saepe minima aliquid pariatur, hic ut eveniet dolorum esse non. Tempore ex voluptatibus reprehenderit sit aliquid sed molestiae quidem placeat labore totam eos, vero et optio aut iste, a soluta vitae quas fugiat qui laudantium recusandae, dolores cumque. Reiciendis nisi quas soluta consequatur! Nesciunt, consequatur quam! Asperiores ut, autem voluptatibus et, fugit, quam iste aspernatur obcaecati facere expedita amet magnam sit doloremque corporis ducimus a temporibus doloribus voluptate qui. Dolores architecto blanditiis rerum nihil repellat amet similique sunt deserunt ratione culpa, reiciendis neque dolor laborum sit reprehenderit ea corporis vel molestias incidunt odio iure facere doloremque? Qui facilis error repudiandae amet sapiente. Sapiente illo nihil dignissimos veniam?</p>
-    </section>
+        <div class="space"></div>
+        <div class="space"></div>
 
-    <div class="space"></div>
-    <div class="space"></div>
+    </main>
 
     <!-- Start -->
 
 
     <!-- end -->
-  
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>Copyright &copy;
                 <script>
                     document.write(new Date().getFullYear());
-                </script>, Rainbow Infinium.</p>
+                </script>, Rainbow Infinium.
+            </p>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
 </body>
+
 </html>
