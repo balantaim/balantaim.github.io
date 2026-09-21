@@ -17,15 +17,17 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/page-transitions.css"> -->
     <script defer src="./js/theme.js"></script>
+    <!-- show content animations -->
+    <script defer src="./js/after.js"></script>
     <script defer src="./js/main.js"></script>
 
     <!-- Meta data -->
-    <meta name="title" th:content="Rainbow Infinium">
-    <meta name="author" th:content="Martin Atanasov">
-    <meta name="description" th:content="This community website for open source projects">
-    <meta name="keywords" th:content="Rainbow Infinium, rainbow infinium community">
+    <meta name="title" content="Rainbow Infinium">
+    <meta name="author" content="Martin Atanasov">
+    <meta name="description" content="This community website for open source projects">
+    <meta name="keywords" content="Rainbow Infinium, rainbow infinium community">
     <!-- Manifest for Android-->
-    <link rel="manifest" th:href="./custom/manifest.json"/>
+    <link rel="manifest" href="./custom/manifest.json"/>
     <!-- Set Theme Color -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdffc4">
     <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#00332a">
@@ -38,7 +40,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <p>RI</p>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="./images/developer_logo_transparent.png" alt="Rainbow Infinium logo">
+                <span style="margin: 0;">Rainbow Infinium</span>
+            </a>
+
             <div class="menu">
                 <div><a href="/">Home</a></div>
                 <div><a href="/about" class="is-active">Projects</a></div>
@@ -76,7 +83,8 @@
         </button>
     </nav-mobile>
     <!-- Navigation End -->
-    <div class="space"></div>
+    
+    <!-- Progress bar -->
     <div class="post-container" id="progress-bar"></div>
 
     <!-- Disable copy content -->
@@ -86,15 +94,107 @@
         <button class="confirmAlert">OK</button>
     </div>
 
-    <!-- Progress bar -->
-    <div class="post-container" id="progress-bar"></div>
-
     <main>
+        <div class="space"></div>
 
         <h1>Projects</h1>
-        <div class="container">
-            <p>Information in development</p>
-        </div>
+
+        <!-- App content -->
+        <section>
+            <div class="container_text">
+                <h2>Oasis - Color Events</h2>
+                <p>"Oasis - Color Events" is a powerful and versatile mobile application that serves as an event diary. This
+                    application is designed to help you easily manage and keep track of all your events and tasks. It
+                    provides a variety of features and functionalities that make it easy for you to organize your
+                    schedule and stay on top of your tasks.</p>
+                <p>One of the main functions of "Oasis - Color Events" is the ability to create events with descriptions,
+                    priority levels, locations, avatars, and times. This makes it easy for you to organize your events
+                    and ensure that you don't forget anything important. You can also set alarms to remind you of
+                    upcoming events, so you never miss anything.</p>
+                <p>Another key feature of "Oasis - Color Events" is the ability to customize the color themes. This means
+                    that you can choose a color that suits your personality and preferences. You can also create charts
+                    to visualize your schedule and see how much time you spend on different tasks.</p>
+                <p>The application also provides a variety of different charts and analytics to help you better
+                    understand your event patterns and behaviors. You can use this information to optimize your schedule
+                    and ensure that you are spending your time efficiently.</p>
+                <p>Overall, "Oasis - Color Events" is a powerful and versatile event diary application that can help you
+                    stay organized and on top of your tasks. Its many features and functionalities make it easy to
+                    manage your schedule and ensure that you never miss anything important. With its customizable color
+                    themes and powerful analytics, it is the perfect tool for anyone who wants to take control of their
+                    schedule and maximize their productivity.</p>
+            </div>
+        </section>
+
+        <!-- gallery -->
+        <section>
+            <div class="card-container">
+                <div class="image-container">
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road.jpg" alt="road"></div>
+                    <div class="image"><img src="./images/road2.jpg" alt="road"></div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="./images/road.jpg" alt="">
+                    <!-- <img src="./images/road.jpg" style="height: 350px; width: 450px;" alt=""> -->
+                </div>
+            </div>
+        </section>
+
+        <div class="space"></div>
+        <div class="space"></div>
+
+        <section>
+            <div class="img">
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+                <div class="column hidden">
+                    <img src="./images/road.jpg" oncontextmenu="return false" alt="road" class="test_img">
+                </div>
+
+            </div>
+        </section>
+
+        <div class="space"></div>
+
+        <section class="hidden">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur a tempore fugiat non? Eius
+                fugiat eum accusantium dolore unde, saepe necessitatibus recusandae quibusdam, laudantium ex deleniti!
+                Qui, totam repudiandae maxime, soluta est saepe fugiat consequuntur inventore ullam ea enim. Sapiente
+                doloremque tenetur eum aspernatur deleniti! Atque quam voluptas animi quisquam, voluptates dolorum
+                ullam, magni consequuntur vero nam dolore eaque quae maxime accusantium. Nisi vel sint veniam amet quos
+                natus, labore nobis magnam placeat optio, aperiam numquam architecto quis aliquam consectetur
+                praesentium exercitationem dolor assumenda doloribus. Necessitatibus et dolorem, magnam praesentium
+                consectetur tempore id laudantium atque quisquam non. Corrupti laboriosam delectus aperiam, illum rem
+                odit! Eos asperiores, amet odio tempore consequatur obcaecati inventore. Totam provident quaerat illum
+                harum sit quae necessitatibus consectetur nisi maxime ullam, iste saepe, molestiae, impedit voluptates
+                doloremque. Aperiam nihil amet porro tempora illum labore aliquid quia, in at, ipsam dolores sunt
+                provident nemo, obcaecati sint. Dolorem qui quidem sint eos, necessitatibus quaerat iste alias deleniti,
+                distinctio tempore blanditiis, dolor quam incidunt dolorum at cumque facilis veniam quo laborum
+                excepturi labore nam? Voluptate nisi quibusdam labore nobis nihil deserunt facilis quaerat officia fugit
+                accusamus quo consequatur totam beatae soluta dignissimos saepe minima aliquid pariatur, hic ut eveniet
+                dolorum esse non. Tempore ex voluptatibus reprehenderit sit aliquid sed molestiae quidem placeat labore
+                totam eos, vero et optio aut iste, a soluta vitae quas fugiat qui laudantium recusandae, dolores cumque.
+                Reiciendis nisi quas soluta consequatur! Nesciunt, consequatur quam! Asperiores ut, autem voluptatibus
+                et, fugit, quam iste aspernatur obcaecati facere expedita amet magnam sit doloremque corporis ducimus a
+                temporibus doloribus voluptate qui. Dolores architecto blanditiis rerum nihil repellat amet similique
+                sunt deserunt ratione culpa, reiciendis neque dolor laborum sit reprehenderit ea corporis vel molestias
+                incidunt odio iure facere doloremque? Qui facilis error repudiandae amet sapiente. Sapiente illo nihil
+                dignissimos veniam?</p>
+        </section>
 
     </main>
 

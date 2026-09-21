@@ -20,12 +20,12 @@
     <script defer src="./js/main.js"></script>
 
     <!-- Meta data -->
-    <meta name="title" th:content="Rainbow Infinium">
-    <meta name="author" th:content="Martin Atanasov">
-    <meta name="description" th:content="This community website for open source projects">
-    <meta name="keywords" th:content="Rainbow Infinium, rainbow infinium community">
+    <meta name="title" content="Rainbow Infinium">
+    <meta name="author" content="Martin Atanasov">
+    <meta name="description" content="This community website for open source projects">
+    <meta name="keywords" content="Rainbow Infinium, rainbow infinium community">
     <!-- Manifest for Android-->
-    <link rel="manifest" th:href="./custom/manifest.json"/>
+    <link rel="manifest" href="./custom/manifest.json"/>
     <!-- Set Theme Color -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdffc4">
     <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#00332a">
@@ -38,7 +38,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <p>RI</p>
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <img src="./images/developer_logo_transparent.png" alt="Rainbow Infinium logo">
+                    <span style="margin: 0;">Rainbow Infinium</span>
+                </a>
+                
             <div class="menu">
                 <div><a href="/">Home</a></div>
                 <div><a href="/projects">Projects</a></div>
@@ -89,6 +94,8 @@
 
 
     <main>
+        <div class="space"></div>
+
         <div class="container">
             <h1>Page not found</h1>
             <h1>Error 404</h1>

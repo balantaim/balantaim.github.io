@@ -20,12 +20,12 @@
     <script defer src="./js/main.js"></script>
 
     <!-- Meta data -->
-    <meta name="title" th:content="Rainbow Infinium">
-    <meta name="author" th:content="Martin Atanasov">
-    <meta name="description" th:content="This community website for open source projects">
-    <meta name="keywords" th:content="Rainbow Infinium, rainbow infinium community">
+    <meta name="title" content="Rainbow Infinium">
+    <meta name="author" content="Martin Atanasov">
+    <meta name="description" content="This community website for open source projects">
+    <meta name="keywords" content="Rainbow Infinium, rainbow infinium community">
     <!-- Manifest for Android-->
-    <link rel="manifest" th:href="./custom/manifest.json"/>
+    <link rel="manifest" href="./custom/manifest.json"/>
     <!-- Set Theme Color -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdffc4">
     <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#00332a">
@@ -38,7 +38,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <p>Rainbow Infinium</p>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="./images/developer_logo_transparent.png" alt="Rainbow Infinium logo">
+                <span style="margin: 0;">Rainbow Infinium</span>
+            </a>
+
             <div class="menu">
                 <div><a href="/">Home</a></div>
                 <div><a href="/projects">Projects</a></div>
@@ -80,8 +85,6 @@
     <!-- Progress bar -->
     <div class="post-container" id="progress-bar"></div>
 
-    <div class="space"></div>
-
     <!-- Disable copy content -->
     <div class="copy-overplay"></div>
     <div class="protect-alert">
@@ -90,6 +93,7 @@
     </div>
 
     <main>
+        <div class="space"></div>
 
         <div class="container_text">
             <h1>Privacy Policy</h1>
@@ -386,7 +390,7 @@
             </p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    
 </body>
 
 </html>
