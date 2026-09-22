@@ -508,12 +508,14 @@ nav-mobile #dark-mode-toggle2 {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
     padding: 10px;
 }
 
 .card-container .image-container .image {
-    height: 260px;
-    width: 380px;
+    max-height: 320px;
+    max-width: 440px;
     border: 10px solid #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -521,7 +523,7 @@ nav-mobile #dark-mode-toggle2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--background);
+    background: var(--secondary);
 }
 
 .card-container .image-container .image img {
@@ -675,5 +677,13 @@ footer {
 
     .menu {
         display: flex;
+    }
+
+    .card-container .image-container {
+        width: 80%;
+    }
+
+    .img .big_img {
+        max-width: 80vw;
     }
 }
