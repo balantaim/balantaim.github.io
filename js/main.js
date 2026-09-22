@@ -32,18 +32,37 @@ function updateProgressBar(){
 document.addEventListener('scroll', updateProgressBar);
 
 //Initiate Gallery with card
-//Open selected image
-document.querySelectorAll('.image-container img').forEach(image =>{
-    image.onclick = () => {
-        document.querySelector('.popup-image').style.display = 'block';
-        document.querySelector('.popup-image img').src = image.getAttribute('src');
-    }
+// Open selected image
+const galleryImages = document.querySelectorAll('.image-container img');
+const popup = document.querySelector('.popup-image');
+const popupImage = document.querySelector('.popup-image img');
+const closeImageButton = document.querySelector('.popup-image span');
+
+// Open selected image
+galleryImages.forEach(image => {
+    image.addEventListener('click', () => {
+        popupImage.src = image.getAttribute('src');
+        popupImage.alt = image.getAttribute('alt') || '';
+
+        popup.style.display = 'block';
+    });
 });
 
-//Close selected image
-const closeImageButton = document.querySelector('.popup-image span');
-if (closeImageButton) {
-    closeImageButton.onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
-    };
+// Close selected image
+function closeImage() {
+    popup.style.display = 'none';
+    popupImage.src = '';
+    popupImage.alt = '';
 }
+
+// Close with X button
+if (closeImageButton) {
+    closeImageButton.addEventListener('click', closeImage);
+}
+
+// Close with ESC key
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && popup.style.display === 'block') {
+        closeImage();
+    }
+});
