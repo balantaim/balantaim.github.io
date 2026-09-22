@@ -638,6 +638,10 @@ footer {
 }
 /* End progress bar */
 
+.popup-image span:hover {
+    color: var(--alert);
+}
+
 /* Only for Firefox - disable custom progress bar*/
 @supports (-moz-appearance:none) {
     #progress-bar {
