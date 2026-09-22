@@ -1,9 +1,21 @@
-/* fonts declaration */
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+/* fonts declaration - https://www.fontsquirrel.com/tools/webfont-generator */
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("../fonts/roboto-variablefont_wdthwght-webfont.woff2") format("woff2"),
+        url("../fonts/roboto-variablefont_wdthwght-webfont.woff") format("woff");
+}
 
 @font-face {
-  font-family: "JaceBeleren";
-  src: url("../fonts/JaceBeleren-Bold.ttf") format("truetype");
+    font-family: "Roboto";
+    font-style: italic;
+    src: url("../fonts/roboto-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
+        url("../fonts/roboto-italic-variablefont_wdthwght-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "JaceBeleren";
+    src: url("../fonts/JaceBeleren-Bold.ttf") format("truetype");
 }
 
 :root {
@@ -40,16 +52,16 @@
 
 body {
     position: relative;
-        display: flex;
+    display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
     /*mobile version*/
     min-height: 100svh;
     background-color: var(--background);
-    font-family: 'Kanit', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 main {
@@ -62,14 +74,16 @@ h1 {
     font-size: 34px;
     color: var(--txt-color);
     letter-spacing: 2px;
-    margin: 24px 0 24px 0;
+    margin: 24px 0 36px 0;
     font-family: "JaceBeleren", sans-serif;
+    font-size: 2.2rem;
 }
 
 h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 32px;
     padding: 33px 0 33px 0;
     flex: 1;
     flex-basis: 25%;
@@ -78,7 +92,7 @@ h2 {
 }
 
 h3 {
-    margin-left: 16px;
+    margin: 32px 0 32px 16px;
     color: var(--txt-color);
     font-family: "JaceBeleren", sans-serif;
 }
@@ -99,6 +113,10 @@ ul li {
 
 a {
     color: var(--accent);
+}
+
+li a {
+    font-style: italic;
 }
 
 .hidden {
@@ -379,6 +397,8 @@ nav-mobile #dark-mode-toggle2 {
 }
 
 .img {
+    max-width: 100%;
+    height: auto;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -509,9 +529,9 @@ nav-mobile #dark-mode-toggle2 {
     transform: scale(1.2);
 }
 
-  .popup-image {
-        contain: paint;
-    }
+.popup-image {
+    contain: paint;
+}
 
 .card-container .popup-image {
     position: fixed;

@@ -1,9 +1,11 @@
 # Dedicated site for Rainbow Infinium community
 
+![Rainbow Infinium](images/developer_logo_transparent.png)
+
 ## Software
 
 **Tools:** html, css, js
 
-## Creator/Founder
+## Founder/Developer
 
 **Name:** Martin Atanasov
