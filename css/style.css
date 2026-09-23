@@ -145,7 +145,7 @@ ul li {
 }
 
 a {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 li a {
