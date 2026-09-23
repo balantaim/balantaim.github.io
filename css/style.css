@@ -18,32 +18,6 @@
     src: url("../fonts/JaceBeleren-Bold.ttf") format("truetype");
 }
 
-/* :root {
-    --light: #f7f7f7;
-    --dark: #101018;
-    --primary: #101018;
-    --secondary: #2EE2CE;
-    --accent: #C80DAE;
-    --txt-color: #101018;
-    --alert: #e53935;
-
-    --foreground: var(--dark);
-    --background: var(--light);
-}
-
-.darkmode {
-    --light: #f7f7f7;
-    --dark: #101018;
-    --primary: #ffffff;
-    --secondary: #2EE2CE;
-    --accent: #C80DAE;
-    --txt-color: #ffffff;
-    --alert: #ff5252;
-
-    --foreground: var(--light);
-    --background: var(--dark);
-} */
-
 :root {
     /* Brand colors */
     --purple: #5900b3;
@@ -226,10 +200,6 @@ nav {
     z-index: 99;
     height: 80px;
     padding: 8px 24px;
-    /* background-image: linear-gradient(90deg,
-                rgba(200, 13, 174, 1) 0%,
-                rgba(46, 226, 206, 1) 47%,
-                rgba(188, 226, 10, 1) 100%); */
     background-image: linear-gradient(90deg, #5900b3, #ff00ff, #00ffcc);
 }
 
@@ -703,20 +673,34 @@ footer {
     .img .big_img {
         width: 300px;
     }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 34px;
+    }
 }
 
 @media (min-width: 480px) {
     .img .big_img {
         width: 400px;
     }
+
+    .logo span {
+        font-size: 22px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
 }
 
 @media (max-width: 768px) {
-    /* start gallery */
     .card-container .popup-image img {
         width: 95%;
     }
-    /* end gallery */
 }
 
 @media (min-width: 768px) {
