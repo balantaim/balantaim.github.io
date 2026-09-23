@@ -18,7 +18,7 @@
     src: url("../fonts/JaceBeleren-Bold.ttf") format("truetype");
 }
 
-:root {
+/* :root {
     --light: #f7f7f7;
     --dark: #101018;
     --primary: #101018;
@@ -39,6 +39,39 @@
     --accent: #C80DAE;
     --txt-color: #ffffff;
     --alert: #ff5252;
+
+    --foreground: var(--light);
+    --background: var(--dark);
+} */
+
+:root {
+    /* Brand colors */
+    --purple: #5900b3;
+    --magenta: #ff00ff;
+    --cyan: #00ffcc;
+    --light: #f7f5ff;
+    --dark: #10001f;
+    --primary: #ff00ff;
+    --secondary: #00ffcc;
+    --accent: #5900b3;
+    --txt-color: #10001f;
+    --alert: #ff3b6b;
+
+    --foreground: var(--dark);
+    --background: var(--light);
+}
+
+.darkmode {
+    --purple: #5900b3;
+    --magenta: #ff00ff;
+    --cyan: #00ffcc;
+    --light: #f7f5ff;
+    --dark: #10001f;
+    --primary: #ff00ff;
+    --secondary: #00ffcc;
+    --accent: #5900b3;
+    --txt-color: #ffffff;
+    --alert: #ff4d73;
 
     --foreground: var(--light);
     --background: var(--dark);
@@ -193,10 +226,11 @@ nav {
     z-index: 99;
     height: 80px;
     padding: 8px 24px;
-    background-image: linear-gradient(90deg,
+    /* background-image: linear-gradient(90deg,
                 rgba(200, 13, 174, 1) 0%,
                 rgba(46, 226, 206, 1) 47%,
-                rgba(188, 226, 10, 1) 100%);
+                rgba(188, 226, 10, 1) 100%); */
+    background-image: linear-gradient(90deg, #5900b3, #ff00ff, #00ffcc);
 }
 
 .container {
@@ -431,8 +465,8 @@ nav-mobile #dark-mode-toggle2 {
     margin-top: 8px;
     vertical-align: middle;
     padding: 8px;
-    max-height: 620px;
-    width: 1080px;
+    height: auto;
+    max-height: 80vh;
 }
 
 .column img {
@@ -625,6 +659,10 @@ footer {
     padding: 0;
 }
 
+.footer-content p {
+    color: var(--light);
+}
+
 /* Start progress bar */
 #progress-bar {
     --progress: 0;
@@ -661,6 +699,18 @@ footer {
     }
 }
 
+@media (min-width: 320px) {
+    .img .big_img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 480px) {
+    .img .big_img {
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     /* start gallery */
     .card-container .popup-image img {
@@ -688,6 +738,12 @@ footer {
     }
 
     .img .big_img {
-        max-width: 80vw;
+        width: 680px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img .big_img {
+        width: 1024px;
     }
 }
