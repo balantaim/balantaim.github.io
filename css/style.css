@@ -520,14 +520,14 @@ nav-mobile #dark-mode-toggle2 {
 .card-container .image-container .image {
     max-height: 320px;
     max-width: 440px;
-    border: 10px solid #fff;
+    border: 4px solid #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--secondary);
+    backdrop-filter: invert(40%);
 }
 
 .card-container .image-container .image img {
